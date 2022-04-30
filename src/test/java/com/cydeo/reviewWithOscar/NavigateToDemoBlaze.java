@@ -15,15 +15,23 @@ public class NavigateToDemoBlaze {
         WebDriverManager.chromedriver().setup(); // I am setting up my taxi driver
 
         WebDriver driver = new ChromeDriver(); // the car itself --- This line opens an empty Chrome webPage
-        // there is polymorphisim: WebDriver is a interface , ChromeDriver is the concrete class
+        // there is polymorphism: WebDriver is a interface , ChromeDriver is the concrete class
 
         driver.get("https://www.demoblaze.com/index.html");
 
         //  driver.navigate().to("https://www.demoblaze.com/index.html");
 
-        String expectedTitle = "STORE";
+        String expectedTitle = "STORE"; // comes from documentation,SRS: system requirements specification
         // we have getTitle() method in Selenium WebDriver library
         String actualTitle = driver.getTitle();
+        System.out.println("actualTitle = " +actualTitle);
+
+        // As a tester, without verification/validation what is your VALUE to the Company
+        if(expectedTitle.equalsIgnoreCase(actualTitle)){
+            System.out.println("Passed");
+        }else{
+            System.out.println("Fail");
+        }
 
     }
 }
