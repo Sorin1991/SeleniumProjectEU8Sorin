@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Task1_YahooTitleVerification {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
          // TC #1: Yahoo Title Verification
         WebDriverManager.chromedriver().setup();
 
@@ -25,12 +25,6 @@ public class Task1_YahooTitleVerification {
 
         WebElement agreeButton = driver.findElement(By.cssSelector("button[type=submit].btn.primary"));// css accept cookies
         agreeButton.click();
-        Thread.sleep(3000);
-
-
-
-
-
 
 
 
@@ -49,6 +43,8 @@ public class Task1_YahooTitleVerification {
         }else{
             System.out.println("Title is NOT as expected.Verification Failed");
         }
+
+        driver.close();
 
 
 
