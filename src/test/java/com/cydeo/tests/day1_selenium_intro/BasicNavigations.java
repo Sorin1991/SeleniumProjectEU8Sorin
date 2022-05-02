@@ -16,6 +16,7 @@ public class BasicNavigations {
         // 2 - Create instance of the Selenium WebDriver
         // This is the line opening an empty browser
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
 
         //3 - Go to "https://www.tesla.com"
