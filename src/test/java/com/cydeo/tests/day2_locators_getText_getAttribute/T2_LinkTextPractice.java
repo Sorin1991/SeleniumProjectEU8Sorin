@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T2_LinkTextPractice {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
 
@@ -31,10 +31,42 @@ public class T2_LinkTextPractice {
 
 
        // 4- Verify title is:
-       // Expected: No A/B Test
-       // 5- Go back to home page by using the .back();
-       // 6- Verify title equals:
-       // Expected: Practice
+        // Expected: No A/B Test
+        String expectedTitle = "No A/B Test";
+        String actualTitle = driver.getTitle();
+
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("Title verification PASS !!!");
+        }else{
+            System.out.println("Title verification FAILED !!!");
+        }
+
+
+        Thread.sleep(3000);
+        // 5- Go back to home page by using the .back();
+        driver.navigate().back();
+
+
+        // 6- Verify title equals:
+        // Expected: Practice
+        String expectedTitleMain = "Practice";
+        String actualTitleMain = driver.getTitle();
+
+        if(expectedTitleMain.equals(actualTitleMain)){
+            System.out.println("Title verification PASS");
+        }else{
+            System.out.println("Title verification FAILED");
+        }
+
+        Thread.sleep(3000);
+
+        driver.quit();
+
+
+
+
+
+
 
     }
 }
