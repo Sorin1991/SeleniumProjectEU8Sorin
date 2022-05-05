@@ -22,7 +22,7 @@ public class PracticeTask_ETSY_Verification {
 
 
 
-        WebElement acceptCookies = driver.findElement(By.xpath("//*[@id=\"gdpr-single-choice-overlay\"]/div/div[2]/div[2]/button"));
+        WebElement acceptCookies = driver.findElement(By.cssSelector("button[class='wt-btn wt-btn--filled wt-mb-xs-0']"));
         acceptCookies.click();
 
 
@@ -33,7 +33,7 @@ public class PracticeTask_ETSY_Verification {
         WebElement searchWoodenSpoon = driver.findElement(By.name("search_query"));
         searchWoodenSpoon.sendKeys("wooden spoon" + Keys.ENTER);
 
-        WebElement acceptCookies2 = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div/div[2]/div/div[2]/div[2]/button"));
+        WebElement acceptCookies2 = driver.findElement(By.cssSelector("button[class='wt-btn wt-btn--filled wt-mb-xs-0']"));
         acceptCookies2.click();
 
         //4. Verify title:
