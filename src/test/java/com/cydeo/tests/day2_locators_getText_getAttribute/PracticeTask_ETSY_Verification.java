@@ -20,8 +20,12 @@ public class PracticeTask_ETSY_Verification {
         //2. Go to https://www.etsy.com
         driver.get("https://www.etsy.com");
 
-        WebElement acceptCookies = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div/div[2]/div/div[2]/div[2]/button"));
+
+
+        WebElement acceptCookies = driver.findElement(By.xpath("//*[@id=\"gdpr-single-choice-overlay\"]/div/div[2]/div[2]/button"));
         acceptCookies.click();
+
+
 
 
 
