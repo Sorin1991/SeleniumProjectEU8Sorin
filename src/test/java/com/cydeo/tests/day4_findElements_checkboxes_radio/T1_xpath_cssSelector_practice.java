@@ -29,7 +29,7 @@ public class T1_xpath_cssSelector_practice {
         // Locate homLink using cssSelector syntax #2
         WebElement homeLink1_ex2 = driver.findElement(By.cssSelector("a.nav-link"));
 
-        // LOcate homeLink using cssSelector, href value
+        // Locate homeLink using cssSelector, href value
         WebElement homeLink1_ex3 = driver.findElement(By.cssSelector("a[href='/']"));
 
 
