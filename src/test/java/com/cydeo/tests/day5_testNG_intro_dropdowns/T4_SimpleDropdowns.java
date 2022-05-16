@@ -15,9 +15,9 @@ public class T4_SimpleDropdowns {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUpMethod(){
+    public void setUpMethod() {
         //1. Open Chrome browser
-         driver = WebDriverFactory.getDriver("Chrome");
+        driver = WebDriverFactory.getDriver("Chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -28,10 +28,9 @@ public class T4_SimpleDropdowns {
     }
 
 
-
     @Test
-    public void simpleDropDownTest(){
-     //TC#4: Verifying “Simple dropdown” and “State selection” dropdown
+    public void simpleDropDownTest() {
+        //TC#4: Verifying “Simple dropdown” and “State selection” dropdown
         //default values
 
         //3. Verify “Simple dropdown” default selected value is correct
@@ -44,7 +43,7 @@ public class T4_SimpleDropdowns {
 
         String expectedSimpleDropdownText = "PLease select an option";
         //Expected: “Please select an option”
-        Assert.assertEquals(actualSimpleDropdownText,expectedSimpleDropdownText);
+        Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText);
 
 
         //4. Verify “State selection” default selected value is correct
@@ -54,11 +53,8 @@ public class T4_SimpleDropdowns {
         String expectedStateDropdownText = "Select a state";
 
         String actualStateDropdownText = stateDropdown.getFirstSelectedOption().getText();
-
-        Assert.assertEquals(expectedSimpleDropdownText,actualStateDropdownText);
-
         //Expected: “Select a State”
-
+        Assert.assertEquals(expectedSimpleDropdownText, actualStateDropdownText);
 
 
     }
