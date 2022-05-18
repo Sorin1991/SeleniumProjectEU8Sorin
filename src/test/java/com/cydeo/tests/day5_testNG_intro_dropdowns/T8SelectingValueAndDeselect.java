@@ -34,7 +34,12 @@ public class T8SelectingValueAndDeselect {
 
         //3. Select all the options from multiple select dropdown.
         Select multipleSelectDropdown = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
-        multipleSelectDropdown.getAllSelectedOptions();
+        multipleSelectDropdown.selectByVisibleText("Java");
+        multipleSelectDropdown.selectByIndex(1);
+        multipleSelectDropdown.selectByValue("c#");
+        multipleSelectDropdown.selectByVisibleText("Python");
+        multipleSelectDropdown.selectByVisibleText("Ruby");
+        multipleSelectDropdown.selectByVisibleText("C");
 
 
 
@@ -45,9 +50,10 @@ public class T8SelectingValueAndDeselect {
             System.out.println(eachOption.getText());
         }
 
-        multipleSelectDropdown.deselectAll();
+
 
         //5. Deselect all values.
+        multipleSelectDropdown.deselectAll();
 
 
     }
