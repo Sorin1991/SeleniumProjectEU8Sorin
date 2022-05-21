@@ -1,5 +1,6 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -39,7 +40,7 @@ public class T1_WindowHandling {
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
         //4. Create a logic to switch to the tab where Etsy.com is open
-        Set<String> allWindowsHandles = driver.getWindowHandles();
+       /* Set<String> allWindowsHandles = driver.getWindowHandles();
 
         for (String each : allWindowsHandles) {
             driver.switchTo().window(each);
@@ -55,6 +56,10 @@ public class T1_WindowHandling {
         String expectedInTitle = "Etsy";
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
+
+        */
+
+        BrowserUtils.switchWindowAndVerify(driver,"etsy","Etsy");
 
 
 
