@@ -1,6 +1,7 @@
 package com.cydeo.tests.day8_proprties_config_reader;
 
 import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,12 +51,21 @@ public class T1_WebTable_Order_Verify {
         // alternative locator to bobMartinCell = //td[.='Bob Martin']/following-sibling::td[3]
 
         String expectedBobDate = "12/31/2021";
-        String actualBobDate = bobMartinCell.getText();
+        String actualBobDate = bpbMartinDateCell.getText();
 
         Assert.assertEquals(actualBobDate, expectedBobDate);
 
+    }
 
+    @Test
+    public void test2(){
+       String costumerOrderDate1 =  WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
 
+        System.out.println("costumerOrderDate1 = " + costumerOrderDate1);
+
+        String costumerOrderDate2 =  WebTableUtils.returnOrderDate(driver,"John Doe");
+
+        System.out.println("costumerOrderDate2 = " + costumerOrderDate2);
 
     }
 }
